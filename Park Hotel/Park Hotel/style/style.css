@@ -1,0 +1,932 @@
+@font-face {
+    font-family: 'Open Sans Hebrew';
+    src: url('../fonts/OpenSansHebrew-Bold.eot');
+    src: local('вє'), url('../fonts/OpenSansHebrew-Bold.woff') format('woff'), url('../fonts/OpenSansHebrew-Bold.ttf') format('truetype'), url('../fonts/OpenSansHebrew-Bold.svg') format('svg');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.wrapper {
+    max-width: 1176px;
+    margin: 0 auto;
+    /* зачем это? */
+    width: 100%;
+    font-size: 0;
+}
+
+@media screen and (max-width: 1176px) {
+    .wrapper {
+        padding: 0 50px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 54px;
+}
+
+@media screen and (max-width: 1024px) {
+    h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+section div>p {
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+.background-grey {
+    background-color: #f5f5f5;
+}
+
+nav a {
+    text-transform: uppercase;
+}
+
+
+/* ШАПКА  */
+
+.menu {
+    background: rgba(32, 83, 80, 0.5);
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 23px;
+    padding: 30px 0px 31px;
+}
+
+.menu a:not(:last-child)::after {
+    display: inline-block;
+    content: "";
+    width: 30px;
+    height: 2px;
+    margin: 5px 45px;
+    background-color: #fff;
+}
+
+.menu a {
+    color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu a {
+        font-size: 1.8rem;
+    }
+    .menu a:not(:last-child)::after {
+        margin: 5px 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu a {
+        display: block;
+        /* Для чего?  */
+        /* text-align: center; */
+        margin-bottom: 30px;
+    }
+    .menu a:not(:last-child)::after {
+        display: block;
+        /* content: none; */
+        /* дублирование 
+    content: ""; */
+        width: 30px;
+        height: 2px;
+        margin: 30px auto;
+    }
+}
+
+
+/* ПЕРВАЯ СЕКЦИЯ БАННЕР */
+
+.park {
+    background-image: url("../img/Park_Hotel.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 450px 0px 30px;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 70px;
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 4.5rem;
+        line-height: 53px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+        line-height: 40px;
+    }
+}
+
+
+/*стрелка*/
+
+.arrow::after {
+    content: "";
+    width: 57px;
+    height: 22px;
+    display: block;
+    background-image: url(../img/Vector\ 1.png);
+    margin: 80px auto 0;
+}
+
+.park p {
+    /* параграф в первой секции  */
+    font-size: 2.5rem;
+    line-height: 33px;
+    margin: 30px auto 60px;
+    max-width: 495px;
+}
+
+@media screen and (max-width: 1024px) {
+    .park p {
+        font-size: 1.8rem;
+        line-height: 23px;
+        margin: 20px auto 45px;
+        /* это прописано для body  */
+        /* text-align: center; */
+        max-width: 356px;
+    }
+}
+
+.park a:first-of-type {
+    font-weight: 500;
+    font-size: 2rem;
+    color: white;
+    background: #AE5F3D;
+    display: block;
+    width: 312px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+
+/*Кнопка*/
+
+.park a:hover {
+    color: rgb(174, 231, 87);
+    background-color: rgb(156, 72, 3);
+}
+
+@media screen and (max-width: 1024px) {
+    .park a:first-of-type {
+        width: 248px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 1.7rem;
+    }
+}
+
+
+/* ВТОРАЯ СЕКЦИЯ О НАС  */
+
+.open-sans-font {
+    font-family: "Open Sans Hebrew", sans-serif;
+}
+
+.about-us h2 {
+    margin: 30px 0px;
+}
+
+.about-us p {
+    /* параграф во второй секции  */
+    max-width: 608px;
+    margin: 0 auto;
+}
+
+.about-us img {
+    max-width: 617px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-us p {
+        font-size: 22px;
+    }
+    .about-us img {
+        max-width: 553px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-us img {
+        max-width: 486px;
+    }
+}
+
+
+/* ТРЕТЬЯ СЕКЦИЯ РАЗВЛЕЧЕНИЯ */
+
+.our-entertainments div>p {
+    /* параграф в третьей секции первый  */
+    max-width: 520px;
+    margin: 30px auto;
+}
+
+.our-entertainments article {
+    background: #fff;
+    border: 2px solid #f1f1f1;
+    border-radius: 30px;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 27px;
+    width: calc((100% - 2 * 24px) / 3);
+    max-width: 444px;
+    display: inline-block;
+    padding: 30px 5px;
+}
+
+.our-entertainments article:not(:last-child) {
+    margin-right: 24px;
+}
+
+.our-entertainments h3 {
+    font-size: 2.5rem;
+    line-height: 29px;
+    margin: 25px auto 20px;
+}
+
+
+/*иконки*/
+
+i {
+    font-size: 150px;
+    color: #AE5F3D;
+}
+
+@media screen and (max-width: 1024px) {
+    i {
+        font-size: 12rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    i {
+        font-size: 15rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    i {
+        font-size: 10rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .our-entertainments article {
+        width: calc((100% - 2 * 20px) / 3);
+    }
+    .our-entertainments article:not(:last-child) {
+        /* в px  */
+        margin-right: 2rem;
+    }
+    .our-entertainments div>p {
+        font-size: 2.2rem;
+    }
+    .our-entertainments p {
+        font-size: 1.6rem;
+    }
+    .our-entertainments h3 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .our-entertainments article {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .our-entertainments article:not(:last-child) {
+        margin: 0 auto 30px;
+    }
+    .our-entertainments article p {
+        font-size: 2.3rem;
+    }
+    .our-entertainments article h3 {
+        font-size: 2.3rem;
+    }
+}
+
+
+/* 
+СЕКЦИЯ АПАРТАМЕНТЫ  */
+
+.our-apartments article {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    position: relative;
+    width: calc((100% - 2 * 48px) / 3);
+    max-width: 360px;
+}
+
+.our-apartments article:not(:last-child) {
+    margin-right: 48px;
+}
+
+.our-apartments article:nth-of-type(2)::before {
+    width: 50px;
+    height: 50px;
+    content: "VIP";
+    color: #fff;
+    border-radius: 50%;
+    background-color: #F24040;
+    position: absolute;
+    top: -25px;
+    left: -15px;
+    text-align: center;
+    line-height: 50px;
+    font-family: Source Serif Pro;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.our-apartments article::after {
+    position: absolute;
+    width: 132px;
+    height: 30px;
+    right: 10px;
+    top: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    content: "";
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.our-apartments article:nth-of-type(1)::after {
+    content: "от 7 т.р./сутки";
+}
+
+.our-apartments article:nth-of-type(2)::after {
+    content: "от 23 т.р./сутки";
+}
+
+.our-apartments article:nth-of-type(3)::after {
+    content: "от 13 т.р./сутки";
+}
+
+.our-apartments div>p {
+    max-width: 617px;
+    margin: 30px auto 55px;
+}
+
+.our-apartments h3 {
+    font-size: 3rem;
+    line-height: 35px;
+    margin: 25px 0px 15px;
+}
+
+.our-apartments article p {
+    font-size: 1.8rem;
+    line-height: 21px;
+    color: #474747;
+    font-weight: 300;
+}
+
+.our-apartments div img {
+    max-width: 698px;
+    /* добавить, что ширина сто процентов  */
+}
+
+@media screen and (max-width: 1024px) {
+    .our-apartments article {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .our-apartments article:not(:last-child) {
+        margin: 0 auto 75px;
+    }
+    .our-apartments h2 {
+        font-size: 3.5rem;
+    }
+    .our-apartments article p {
+        font-size: 2.3rem;
+    }
+    .our-apartments article::after {
+        width: 150px;
+        height: 34px;
+        font-size: 1.8rem;
+        line-height: 34px;
+    }
+    .our-apartments div img {
+        /* это уже есть  */
+        width: 698px;
+    }
+    .our-apartments article:nth-of-type(2)::before {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .our-apartments article p {
+        font-size: 2.2rem;
+    }
+    .our-apartments article:not(:last-child) {
+        margin: 0 auto 80px;
+    }
+    .our-apartments article::after {
+        width: 174px;
+        height: 36px;
+        font-size: 2rem;
+        line-height: 36px;
+    }
+    .our-apartments div img {
+        /* это будет max-width 
+    но если ты ограничиваешь ширину изображения, то и колонку нужно, чтобы цены корректно размещались  */
+        width: 590px;
+    }
+    .our-apartments article:nth-of-type(2)::before {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .our-apartments p {
+        font-size: 2.2rem;
+    }
+    .our-apartments article p {
+        font-size: 1.6rem;
+    }
+    .our-apartments h3 {
+        font-size: 1.7rem;
+    }
+    .our-apartments div img {
+        /* max-width  */
+        width: 280px;
+        /* почему? */
+        margin: 0 auto;
+    }
+    .our-apartments article::after {
+        width: 130px;
+        height: 28px;
+        font-size: 1.6rem;
+        line-height: 28px;
+    }
+    .our-apartments article:nth-of-type(2)::before {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+
+/*форма*/
+
+form {
+    max-width: 1016px;
+    background-color: #fff;
+    padding: 100px 121px 100px 119px;
+    border-radius: 30px;
+    border: 1px #eee solid;
+    margin: 0px auto;
+}
+
+form>h3 {
+    font-size: 4rem;
+    line-height: 47px;
+}
+
+.text {
+    display: block;
+    font-size: 2.2rem;
+    font-family: Roboto;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.email {
+    margin-bottom: 25px;
+    width: 100%;
+    height: 60px;
+    padding-left: 35px;
+    font-size: 2rem;
+    border: 1px solid #AE5F3D;
+}
+
+.type-apartments {
+    margin-bottom: 20px;
+    font-size: 2.6rem;
+    text-align: left;
+}
+
+.form-p1 {
+    max-width: 572px;
+    margin: 30px auto 50px;
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 29px;
+}
+
+form div {
+    text-align: left;
+    font-size: 2rem;
+}
+
+form div:not(:last-of-type) {
+    margin-bottom: 23px;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+}
+
+input[type=”radio”]+label:not(:last-of-type) {
+    margin-bottom: 23px;
+}
+
+
+/* Поля */
+
+input[type="text"]:focus {
+    outline-color: rgb(174, 231, 87);
+}
+
+input[type="email"]:focus {
+    outline-color: rgb(174, 231, 87);
+}
+
+
+/* Кнопка */
+
+.submit {
+    display: block;
+    width: 404px;
+    height: 60px;
+    line-height: 60px;
+    margin: 40px auto 0px;
+    font-size: 2rem;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #AE5F3D;
+    border: solid #AE5F3D;
+}
+
+
+/*media  к forma*/
+
+@media screen and (max-width: 1024px) {
+    form {
+        max-width: 820px;
+        padding: 80px 102px;
+    }
+    form h3 {
+        font-size: 3.5rem;
+        line-height: 41px;
+        /* не может быть auto  */
+        margin: 80px auto 30px;
+    }
+    .submit {
+        width: 324px;
+        height: 48px;
+        font-size: 1.8rem;
+        line-height: 21px;
+    }
+    .form-p1 {
+        font-size: 2.2rem;
+        line-height: 26px;
+        margin: 30px auto 30px;
+    }
+    .text {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    .email {
+        /* дублирование */
+        width: 100%;
+        height: 53px;
+        padding-left: 35px;
+        font-size: 1.8rem;
+    }
+    .type-apartments p {
+        margin-bottom: 20px;
+        padding-left: 66px;
+        font-size: 2rem;
+        line-height: 23px;
+    }
+    input[type="radio"] {
+        /* дублирование */
+        width: 20px;
+        height: 20px;
+        margin-right: 15px;
+        padding-left: 66px;
+    }
+    .submit {
+        width: 324px;
+        height: 48px;
+        line-height: 20px;
+        margin: 40px auto 80px;
+        font-size: 1.8rem;
+    }
+    form div {
+        /* дублирование */
+        text-align: left;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        max-width: 720px;
+        padding: 70px 24px;
+    }
+    form h3 {
+        /* не может быть auto  */
+        margin: 70px auto 25px;
+    }
+    .form-p1 {
+        margin: 25px auto 35px;
+        max-width: 506px;
+    }
+    .text {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+    .email {
+        margin-bottom: 20px;
+        height: 58px;
+        font-size: 2.2rem;
+    }
+    .type-apartments p {
+        margin-bottom: 22px;
+        padding-left: 53px;
+        font-size: 2.2rem;
+        line-height: 26px;
+    }
+    form div {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        padding: 0;
+    }
+    form h3 {
+        font-size: 1.7rem;
+        /* не может быть auto  */
+        margin: 20px auto;
+    }
+    .submit {
+        width: 150px;
+        height: 40px;
+        line-height: 30px;
+        margin: 40px auto 0px;
+        font-size: 1.5rem;
+        ;
+    }
+    .form-p1 {
+        max-width: 200;
+        font-size: 1.3rem;
+        line-height: 20px;
+        margin: 10px auto 30px;
+    }
+    .text {
+        display: block;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        padding-left: 30px;
+    }
+    .email {
+        margin-bottom: 15px;
+        width: 80%;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 1.5rem;
+    }
+    .type-apartments {
+        margin-bottom: 10px;
+        margin-left: 30px;
+        font-size: 1rem;
+        text-align: left;
+    }
+    input[type="radio"] {
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+        margin-left: 30px;
+    }
+    .submit {
+        display: block;
+        width: 170px;
+        height: 30px;
+        line-height: 20px;
+        margin: 20px auto 30px;
+        font-size: 1rem;
+        border-radius: 30px;
+    }
+    form div {
+        text-align: left;
+        font-size: 1rem;
+    }
+}
+
+input[type="submit"]:hover {
+    color: rgb(174, 231, 87);
+    background-color: rgb(156, 72, 3);
+}
+
+
+/*кнопка наверх*/
+
+#button {
+    display: inline-block;
+    background-color: #AE5F3D;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s;
+    z-index: 1000;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: rgb(156, 72, 3);
+}
+
+#button:active {
+    background-color: #555;
+}
+
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: rgb(174, 231, 87);
+}
+
+
+/* ПОДВАЛ  */
+
+footer {
+    padding: 70px 0px 73.5px;
+}
+
+footer nav {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 18px;
+    width: 150px;
+    margin: 25px auto;
+    padding: 25px 0px;
+    border-top: 0.7px solid #737373;
+    border-bottom: 0.7px solid #737373;
+}
+
+footer h2 {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 35px;
+}
+
+footer nav a {
+    color: #000000;
+    display: block;
+}
+
+footer nav a:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+
+/*ссылки*/
+
+.networks i {
+    color: #000000;
+    font-size: 1.75rem;
+}
+
+.networks i {
+    transition: .5s;
+}
+
+.networks i:hover {
+    transform: scale(1.7);
+}
+
+.networks a:not(:last-of-type) {
+    margin-right: 30px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+@media screen and (max-width: 1024px) {
+    section {
+        padding: 80px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        padding: 70px 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    footer h2 {
+        font-size: 2.7rem;
+    }
+    footer {
+        padding: 50px 0px 53.5px;
+    }
+    footer nav {
+        font-size: 1.3rem;
+        line-height: 15px;
+        width: 140px;
+        margin: 25px auto;
+        padding: 25px 0px;
+    }
+    footer nav a:not(:last-child) {
+        margin-bottom: 33px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer h2 {
+        font-size: 2.5rem;
+    }
+    footer nav {
+        font-size: 1.5rem;
+        line-height: 17px;
+        width: 90px;
+        margin: 20px auto;
+        padding: 20px 0px;
+    }
+    footer nav a:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer h2 {
+        font-size: 15px;
+    }
+    footer nav {
+        font-size: 1rem;
+        line-height: 15px;
+        width: 70px;
+    }
+}
